@@ -2,6 +2,7 @@
 ## functions do
 
 ## Write a short comment describing this function
+## Create a function with getter&setter functions to matrix and its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -20,7 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-
+## cache the results if exisitng otherwise, calculate and save it for later
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   m <- x$getInv()
