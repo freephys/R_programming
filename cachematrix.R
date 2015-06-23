@@ -21,7 +21,23 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-## cache the results if exisitng otherwise, calculate and save it for later
+## cache the results if exisitng otherwise, calculate and save it for later lookup
+## It can be run like this:
+##> a = makeCacheMatrix(matrix(c(1:4),nrow = 2))
+##> a$get()
+##     [,1] [,2]
+##[1,]    1    3
+##[2,]    2    4
+
+##> cacheSolve(a)
+##     [,1] [,2]
+##[1,]   -2  1.5
+##[2,]    1 -0.5
+##> cacheSolve(a)
+##getting cached data
+##     [,1] [,2]
+##[1,]   -2  1.5
+##[2,]    1 -0.5
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   m <- x$getInv()
